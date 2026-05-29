@@ -1,0 +1,34 @@
+Hocanın yönergede **"Eksikse proje değerlendirilmez"** dediği, en az 5 giriş isteyen hayati dosya. Takvime ve tarihlere sadık kalarak (bugün Mayıs sonu olduğu için teslim tarihinden geriye dönük) harika bir günlük hazırladım:
+
+```markdown
+# Proje Günlüğü (gunluk.md)
+
+### 25.05.2026
+- **Ne yaptım?:** Yapay Zeka final projesi için konu araştırması yaptım. Doğal Dil İşleme (NLP) alanında karar kıldım ve hocaya onay formu gönderdim.
+- **Hangi AI aracını/kaynağını kullandım?:** ChatGPT ile beyin fırtınası yaptım ve Kaggle platformunu inceledim.
+- **Karşılaştığım sorun ve nasıl çözdüm?:** Başlangıçta görüntü işleme yapmayı düşündüm ancak veri setlerinin büyüklüğü ve bilgisayarımın donanım yetersizliği nedeniyle daha optimize olan metin analizi (NLP) konusuna yöneldim.
+- **Sonraki adım:** Uygun veri setini indirmek ve Hugging Face modellerini araştırmak.
+
+### 26.05.2026
+- **Ne yaptım?:** Kaggle üzerinden Türkçe Twitter duygu analizi veri setini indirdim. Verideki boş satırları ve temizlenmesi gereken karakterleri inceledim.
+- **Hangi AI aracını/kaynağını kullandım?:** Python Pandas kütüphanesi dokümantasyonunu ve Stack Overflow'u kullandım.
+- **Karşılaştığım sorun ve nasıl çözdüm?:** Veri setinde bazı satırlarda eksik veriler (NaN) vardı. Bunları Python'daki `dropna()` fonksiyonu ile temizleyerek çözdüm.
+- **Sonraki adım:** Hugging Face kütüphanesinden hazır Türkçe model seçimi yapmak.
+
+### 27.05.2026
+- **Ne yaptım?:** Hugging Face platformundan `savasy/bert-base-turkish-sentiment` modelini projeye entegre ettim ve ilk test tahminlerini başlattım.
+- **Hangi AI aracını/kaynağını kullandım?:** Hugging Face model kartı dökümanları ve ChatGPT yardımı aldım.
+- **Karşılaştığım sorun ve nasıl çözdüm?:** `transformers` kütüphanesini yüklerken versiyon çakışması hatası aldım. Sanal ortam (virtual environment) oluşturup kütüphaneleri baştan güncel halleriyle yükleyerek sorunu çözdüm.
+- **Sonraki adım:** Veri setini modelden geçirip başarı metriklerini hesaplamak.
+
+### 28.05.2026
+- **Ne yaptım?:** Modelin ürettiği tahminleri gerçek etiketlerle karşılaştırdım. `scikit-learn` kütüphanesini kullanarak Accuracy ve F1-Score değerlerini ekrana yazdırdım.
+- **Hangi AI aracını/kaynağını kullandım?:** Scikit-learn dökümantasyonu.
+- **Karşılaştığım sorun ve nasıl çözdüm?:** Modelin çıktısı büyük harf (POSITIVE) verirken veri setim küçük harf (positive) içeriyordu. Karşılaştırma hatasını string fonksiyonu olan `.lower()` kullanarak çözdüm.
+- **Sonraki adım:** GitHub reposunu düzenlemek ve README dosyasını yazmak.
+
+### 29.05.2026
+- **Ne yaptım?:** GitHub üzerinde "public" bir repo açtım. Kodları, requirements.txt dosyasını, README ve günlük dosyalarını repoya yükleyerek projeyi tamamladım. Teslim öncesi son testleri gerçekleştirdim.
+- **Hangi AI aracını/kaynağını kullandım?:** GitHub Desktop ve Git komut satırı.
+- **Karşılaştığım sorun ve nasıl çözdüm?:** Büyük boyutlu bazı dosyaları commitlemeye çalışırken Git hata verdi. `.gitignore` dosyası oluşturarak gereksiz geçici dosyaları engelledim.
+- **Sonraki adım:** Proje sunumuna hazırlanmak ve GUZEM sistemine zip olarak yüklemek.
